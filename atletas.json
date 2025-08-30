@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "Juan Perez",
+    "edad": 23,
+    "disciplina": "Atletismo",
+    "departamento": "Quetzaltenango",
+    "entrenamientos": [
+      {
+        "fecha": "2028-08-01",
+        "tipo": "Velocidad 100m",
+        "marca": 10.94
+      },
+      {
+        "fecha": "2025-08-05",
+        "tipo": "Velocidad 100m",
+        "marca": 10.87
+      }
+    ]
+  }
+]
