@@ -1,0 +1,38 @@
+@startuml
+
+    class AppMain {
+        + main(String[] args) : void
+    }
+
+    class Atleta {
+        - nombre : String
+        - disciplina : String
+        - entrenamientos : List<Entrenamiento>
+        + getNombre() : String
+        + getDisciplina() : String
+        + agregarEntrenamiento(e : Entrenamiento) : void
+        + calcularPromedio() : double
+        + mejorMarca() : double
+    }
+
+    class Entrenamiento {
+        - fecha : LocalDate
+        - marca : double
+        + getFecha() : LocalDate
+        + getMarca() : double
+    }
+
+    class GestorAtletas {
+        - atletas : List<Atleta>
+        - gson : Gson
+        + registrarAtleta(a : Atleta) : void
+        + obtenerEstadisticas(nombre : String) : String
+        + guardarDatos() : void
+        + cargarDatos() : void
+    }
+
+    AppMain --> GestorAtletas
+    GestorAtletas --> Atleta
+    Atleta --> Entrenamiento
+}
+@enduml
